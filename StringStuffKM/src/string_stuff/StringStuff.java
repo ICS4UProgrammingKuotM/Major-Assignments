@@ -105,8 +105,8 @@ public class StringStuff {
 					// Checks to see if the variable c is a number and if the count is less than length of the string minus 1
 					if (Character.isDigit(c) && count < userString.length() - 1) {	
 						next = userString.charAt(count + 1);	
-						// Checks to see if the next character after c is a letter
-							if (Character.isLetter(next)) {
+						// Checks to see if the next character after c is not a digit
+							if (!Character.isDigit(next)) {
 								// Converts the variable c to a string then to a integer and then assigns it to the repeat variable
 								int repeat = Integer.parseInt(Character.toString(c));
 								// Adds the character next which is a character at the index of count to the end of the string builder
